@@ -16,5 +16,5 @@ Color Palette Explorer is a web-based tool designed to help users create and exp
 ## Setup
 To run this project locally, follow these steps:
 1. Clone the repository: git clone https://github.com/alpewa19/color_palette_explorer.git
-2. Navigate to the project directory:
+2. Navigate to the project directory: cd color-palette-explorer
 3. Open the `ColorPaletteExplorer.html` file in a web browser.
