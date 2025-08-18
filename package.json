@@ -1,0 +1,16 @@
+{
+  "name": "color-palette-explorer",
+  "version": "1.0.0",
+  "description": "A color palette explorer tool",
+  "main": "ColorPaletteExplorer.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": ["color", "palette", "explorer", "css", "javascript"],
+  "author": "Ruslan Alpenov",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+} 

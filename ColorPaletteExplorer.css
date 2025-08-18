@@ -6,6 +6,16 @@
 	--main: hsl(var(--base-hue), var(--saturation), var(--lightness));
 	--shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
+
+/* Fallback для браузеров без поддержки CSS переменных */
+@supports not (--custom: property) {
+	:root {
+		--base-hue: 240;
+		--saturation: 85%;
+		--lightness: 60%;
+		--rotation: 40;
+	}
+}
 .base-color {
 	--hue: var(--base-hue);
 	background-color: hsl(var(--hue), var(--saturation), var(--lightness));

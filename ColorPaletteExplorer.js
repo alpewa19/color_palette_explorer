@@ -65,7 +65,26 @@ const updateColors = () => {
 
 $("colors").addEventListener("click", (e) => {
 	let code = e.target.innerText;
-	navigator.clipboard.writeText(e.target.innerText);
+	
+	// Проверяем поддержку clipboard API
+	if (navigator.clipboard && navigator.clipboard.writeText) {
+		navigator.clipboard.writeText(e.target.innerText).catch(err => {
+			console.log('Clipboard API не поддерживается:', err);
+		});
+	} else {
+		// Fallback для старых браузеров
+		const textArea = document.createElement("textarea");
+		textArea.value = e.target.innerText;
+		document.body.appendChild(textArea);
+		textArea.select();
+		try {
+			document.execCommand('copy');
+		} catch (err) {
+			console.log('Fallback копирование не сработало:', err);
+		}
+		document.body.removeChild(textArea);
+	}
+	
 	if ((e.target.innerText = code)) e.target.innerText = `copied\nto clipboard`;
 
 	setTimeout(function () {
