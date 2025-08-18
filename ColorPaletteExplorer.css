@@ -175,7 +175,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
 		padding: 10px;
 		align-items: center;
 	}
-	#save-button: {
+	#save-button {
 		margin: auto;
 	}
   .inputs-container {
@@ -223,7 +223,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
 	.input-group {
 		margin-left: 0;
 	}
-	#save-button: {
+	#save-button {
 		margin: auto;
 	}
 }
